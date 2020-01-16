@@ -1,0 +1,65 @@
+<!-- call stack -> các hàm đc xếp vào stack để chờ thực hiện 
+breakpoint -> chương trình chạy đến đó thì dừng lại -->
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TODO list</title>
+</head>
+<body>
+  <input id="new-item" type="text" name="">
+  <button type="button" onclick="addItem()">Add</button>
+  <ul id="todo-list">
+      <!-- <li>Take a shower</li>
+      <li>Have a walk</li>
+      <li>Go to bed</li> -->
+  </ul>
+  <script type="text/javascript">
+    var storageKey = 'todoList';
+    // var todoList = [
+    //  'Take a shower',
+    //  'Have a walk',
+    //  'Go to bed'
+    // ];
+    var dataString = localStorage.getItem(storageKey);
+    var todoList;
+    if (dataString) {
+      todoList = JSON.parse(dataString);//convert value of storageKey to array  
+    }
+    else {
+      todoList = [];
+    }
+    render();
+
+    function addItem() {
+      // console.log('add item...');
+      var input = document.getElementById("new-item");
+      var newItem = input.value;//get value of input
+      todoList.push(newItem);
+      render();
+      input.value = '';//clear input
+
+      //update localStorage
+      // localStorage.setItem(storageKey, todoList);
+      //hoặc
+      localStorage.setItem(storageKey, JSON.stringify(todoList));
+    }
+
+    function render() {
+      var htmlList = document.getElementById("todo-list");
+      var content = todoList.map(function(item) {
+        return '<li>'+item+'</li>';
+      });
+      htmlList.innerHTML = content.join('');
+    } 
+  </script>
+</body>
+</html>
+
+
+<!-- localStorage như 1 object 
+localStorage.setItem('foo','bar') => tạo giá trị foo: bar 
+localStorage.getItem('foo') => xem giá trị của key 'foo'
+localStorage.removeItem('foo') => xóa key -->

@@ -1,0 +1,29 @@
+/*flex-basis: <length>; change length of element's content */
+/*flex-grow: <number>; chia khoảng trống còn lại cho các element con dựa theo <number>*/ 
+/*flex-shrink: 1* <number>; ít dùng*/
+
+.container {
+	display: flex;
+	background-color: #DDD;
+	color: #FFF;
+	flex-direction: row;
+}
+
+.child-1 {
+	background-color: red;
+	flex-basis: 150px;
+	flex-grow: 1;
+	text-align: center;
+}
+
+.child-2 {
+	background-color: green;
+	flex-basis: 200px;
+	flex-grow: 1;
+}
+
+.child-3 {
+	background-color: blue; 
+	flex-basis: 150px;
+	flex-grow: 1;
+}

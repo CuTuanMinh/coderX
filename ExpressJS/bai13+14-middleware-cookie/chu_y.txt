@@ -1,0 +1,24 @@
+1.middleware như 1 bộ phận trung gian để giao tiếp giữa các phần trong MVC
+VD:
+
+router.get('/search', controller.search); -> controller.search là 1 middleware
+body-parser là 1 middleware
+
+// function middleware1(req, res, next) {
+// 	console.log('middleware1');
+// 	next(); 
+// 	next() -> thuc hien xong middleware1 roi tiep tuc thuc hien middleware2
+// }
+
+// function middleware2(req, res, next) {
+// 	console.log('middleware2');
+// 	res.send('Hello');
+// }
+
+// router.get('/test', middleware1, middleware2);
+
+
+
+2. Ứng dụng của cookie
+Khi user đã login, server return về client 1 cookie ghi lại mã của phiên làm việc. Lần sau khi client tiếp tục phiên làm việc thì mã cookie đc gửi lên server để kiểm tra. Nếu user log out thì mã cookie đó bị xóa, kết thúc làm việc.
+-> không phải đăng nhập lại sau 1 thời gian ko làm việc  

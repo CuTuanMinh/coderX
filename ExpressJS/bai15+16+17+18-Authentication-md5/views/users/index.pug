@@ -1,0 +1,22 @@
+extends ../layouts/master.pug
+
+block content
+	h1 Users
+		
+	a(href="/users/create", class="btn btn-primary") New
+
+	br
+	br
+
+	form(action="/users/search", method="GET", style="width: 200px")
+		input(type="text", name="q", value=param, placeholder="Enter name", class="form-control")
+		button(class="btn btn-primary") Search
+
+	ul
+		each user in users
+			li
+				span= user.name
+				span &nbsp
+				span= user.phone
+				span &nbsp
+				a(href="/users/" + user.id) View

@@ -1,0 +1,17 @@
+/*justify-content: flex-start* | flex-end | center | space-between | space-around | space-evenly*/
+/*-> căn chỉnh vị trí của các element con*/
+
+/*align-items: flex-start | flex-end | center | baseline | stretch**/
+/*-> căn chỉnh các element con ở hướng vuông góc với hướng hiện tại của nó*/
+
+/*đánh dấu '*' là giá trị mặc định*/
+
+.container {
+	display: flex; /*3 thằng con bị ép nằm trên 1 hàng*/
+	background-color: #DDD;
+	height: 100px;
+	flex-direction: row;/*flex-direction: row|column; hướng flex (mặc định là row)*/
+	justify-content: flex-end;
+	align-items: flex-start;
+}
+/*để sử dụng flex thì phải đặt thuộc tính display của thằng cha là flex*/

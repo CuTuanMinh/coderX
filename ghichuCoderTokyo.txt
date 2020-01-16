@@ -1,0 +1,13 @@
+JavaScript 2018 A-Z
+-Bài 21.   https://jsfiddle.net/k7fs85j2/21/
+
+Create cakePHP project
+	composer create-project --prefer-dist cakephp/app nameProject
+	composer create-project --prefer-dist cakephp/cakephp nameProject
+
+Create laravel project
+	composer create-project --prefer-dist laravel/laravel nameProject
+
+CakePHP 3: Bake by example
+https://dev.to/northgoingzax/cakephp-3-bake-by-example-40pp
+

@@ -1,0 +1,10 @@
+Restart Server tự động
+
+install: npm install --save-dev nodemon
+
+thêm vào "scripts" trong package.json:
+"start": "nodemon index.js"
+
+chạy chương trình:
+npm start 
+

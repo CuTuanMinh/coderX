@@ -1,0 +1,4 @@
+install React Developer Tools plugin on Chrome
+
+=> xuất hiện tab React khi inspect 
+ở đó hiển thị cấu trúc html như đã code bằng react => tác dụng: kiểm tra xem code đúng như ý muốn chưa 

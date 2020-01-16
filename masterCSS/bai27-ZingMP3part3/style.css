@@ -1,0 +1,29 @@
+.album-square {
+	width: 128px;
+	height: 128px;
+	background-color: #DDD;
+	/*background-image: url('https://via.placeholder.com/128x128');*/
+	background-image: url('./ng.jpg');
+	background-size: cover;
+	background-position: center; 
+	font-family: Arial, sans-serif;
+	color: #FFF;
+	font-size: 40px;
+}
+
+.album-square .overlay {
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.3);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0; 	/*or display: none | visibility: hidden*/
+}
+
+.album-square:hover .overlay {
+	opacity: 1;
+}
+
+.album-square:hover .overlay {
+	opacity: 1;
+}

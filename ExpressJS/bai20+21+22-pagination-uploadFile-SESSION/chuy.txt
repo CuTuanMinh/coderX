@@ -1,0 +1,6 @@
+form muốn gửi file phải thêm enctype="multipart/form-data" vào thẻ <form>
+bodyParser ko hỗ trợ multipart form-data
+khai báo multer để hỗ trợ upload file trong user.route.js
+khai báo upload là instance của multer
+trước khi validate thì khai báo upload file -> router.post('/create', upload.single('avatar'), validate.postCreate, controller.postCreate);
+

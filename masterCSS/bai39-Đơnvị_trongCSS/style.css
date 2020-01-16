@@ -1,0 +1,17 @@
+/*1em = font của thằng cha của element hiện tại*/
+/*1rem = kích thước của thằng root (tức là thằng tag <html> có kích thước 16px)*/
+
+.px {
+	font-size: 32px;
+}
+
+.em {
+	font-size: 2em;
+}
+
+.rem {
+	font-size: 2rem;
+}
+
+/*nếu dùng px thì dù user thay đổi cỡ chữ trên trình duyệt -> cỡ chữ ko đổi*/
+/*nếu dùng rem thì khi user thay đổi cỡ chữ trên trình duyệt -> cỡ chữ có đổi -> thuận lợi cho người già dễ nhìn hơn  */

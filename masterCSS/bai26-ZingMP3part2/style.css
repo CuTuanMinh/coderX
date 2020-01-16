@@ -1,0 +1,23 @@
+/*placeholder.com -> tạo link ảnh với kích thước mong muốn*/
+
+.album-cover {
+	width: 128px;
+	height: 128px;
+	background-color: #DDD;
+	/*background-image: url('https://via.placeholder.com/128x128');*/
+	background-image: url('./ng.jpg');
+	background-size: cover;
+	background-position: center; 
+	font-family: Arial, sans-serif;
+	color: #FFF;
+	font-size: 15px;
+}
+
+.album-cover .overlay {
+	height: 100%;
+	background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(22,92,128,0.1699054621848739) 35%, rgba(11,192,39,0.17270658263305327) 68%, rgba(0,212,255,1) 100%);
+	display: flex;
+	align-items: flex-end;
+	padding: 8px;
+	box-sizing: border-box;
+}

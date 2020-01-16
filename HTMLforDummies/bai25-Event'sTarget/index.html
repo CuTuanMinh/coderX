@@ -1,0 +1,75 @@
+<!-- Add delete button -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TODO list</title>
+</head>
+<body>
+	<input id="new-item" type="text" name="">
+	<button type="button" onclick="addItem()">Add</button>
+	<ul id="todo-list">
+	    <!-- <li>Take a shower</li>
+	    <li>Have a walk</li>
+	    <li>Go to bed</li> -->
+	</ul>
+	<script type="text/javascript">
+		var storageKey = 'todoList';
+		var htmlList = document.getElementById("todo-list");
+		var dataString = localStorage.getItem(storageKey);
+		var todoList;
+		if (dataString) {
+			todoList = JSON.parse(dataString);//convert value of storageKey to array	
+		}
+		else {
+			todoList = [];
+		}
+
+		htmlList.addEventListener("click", onListClicked);
+		render();
+
+		function onListClicked(event) {
+			// console.log(event);
+			// console.log(event.target);
+
+			// event là object của sự kiện, có thể truyền vào hàm hoặc không
+			//event.target chính là HTML tag đang click vào 
+
+			var button = event.target;
+			var i = parseInt(button.dataset.id);
+			todoList.splice(i, 1);
+			localStorage.setItem(storageKey, JSON.stringify(todoList));
+			render();
+		}
+
+		function addItem() {
+			// console.log('add item...');
+			var input = document.getElementById("new-item");
+			var newItem = input.value;//get value of input
+			todoList.push(newItem);
+			render();
+			input.value = '';//clear input
+
+			//update localStorage
+			// localStorage.setItem(storageKey, todoList);
+			//hoặc
+			localStorage.setItem(storageKey, JSON.stringify(todoList));
+		}
+
+		function render() {
+			var content = todoList.map(function(item, i) {
+				// i là index của item
+				return '<li>' + item + '<button data-id="' + i +'">Delete</button></li>';
+			});
+			htmlList.innerHTML = content.join('');
+		}	
+	</script>
+</body>
+</html>
+
+
+<!-- localStorage như 1 object 
+localStorage.setItem('foo','bar') => tạo giá trị foo: bar 
+localStorage.getItem('foo') => xem giá trị của key 'foo'
+localStorage.removeItem('foo') => xóa key -->
+
+<!-- nếu thay đổi cổng thì dữ liệu trên localStorage sẽ mất -->

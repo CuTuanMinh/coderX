@@ -1,0 +1,25 @@
+hello world
+
+install:  npm -g install static-server
+start: static-server
+đổi cổng: static-server -p port
+
+other way:
+python -m SimpleHTTPServer port
+php -S localhost:port
+
+host là địa chỉ IP tĩnh của máy tính mà server chạy trên đó
+khi tìm địa chỉ IP bằng What is my ip address: địa chỉ IP của máy là địa chỉ của router
+các thiết bị điện tử kết nối cùng router đc cấp địa chỉ IP riêng theo router đó.
+
+vào web-server trên máy mình -> localhost:port
+vào web-server từ máy khác cùng router -> IP address máy chứa webserver:port
+tìm IPaddress máy chứa webserver cùng router -> ifconfig
+
+vào webserver từ máy khác khác router -> IP address của router chứa máy chạy webserver:port
+
+
+Tunnel ngrok -> tạo đường hầm(không phải mở port)
+1.install
+2.ngrok http 9080 -> tạo đường hầm đến cổng 9080.
+3.nhận đc địa chỉ trang web truy cập trực tiếp

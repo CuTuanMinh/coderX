@@ -1,0 +1,17 @@
+copy node_modules for running
+
+
+heroku
+
+id: caubeuudam@gmail.com
+pass: Chinganxinhdep237
+
+Về heroku, trước khi deploy:
+- Sửa biến port sử dụng env 
+- Kiểm tra lại package.json
+- Ko lưu upload file lên heroku (use "Cloudinary" service for save)
+- Heroku chỉ lưu source c
+
+Khi deploy lên heroku, chỉ các package trong dependencies đc cài đặt, trong devDependencies thì ko.
+
+

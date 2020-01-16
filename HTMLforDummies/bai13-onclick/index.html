@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TODO list</title>
+</head>
+<body>
+	<input id="new-item" type="text" name="">
+	<button type="button" onclick="addItem()">Add</button>
+	<ul id="todo-list">
+	    <!-- <li>Take shower</li>
+	    <li>Have a walk</li>
+	    <li>Go to bed</li> -->
+	</ul>
+	<script type="text/javascript">
+		var todoList = [
+			'Take a shower',
+			'Have a walk',
+			'Go to bed'
+		];
+
+		function addItem() {
+			// console.log('add item...');
+			var input = document.getElementById("new-item");
+			var newItem = input.value;//get value of input
+			todoList.push(newItem);
+			render();
+			input.value = '';//clear input
+		}
+
+		function render() {
+			var htmlList = document.getElementById("todo-list");
+			var content = todoList.map(function(item) {
+				return '<li>'+item+'</li>';
+			});
+			htmlList.innerHTML = content.join('');
+		}	
+	</script>
+</body>
+</html>

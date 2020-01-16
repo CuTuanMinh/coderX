@@ -1,0 +1,72 @@
+<!-- chuyển dữ liệu lên API Server để dùng chung cho các trình duyệt  -->
+<!-- install JSON server  ->   npm install -g json-server -->
+<!-- start JSON server    ->   json-server --watch json-file (mặc định là port 3000)       -->
+<!-- hoặc muốn đổi cổng   ->   json-server --watch json-file --port number -->
+
+
+<!-- lấy dữ liệu từ API server, không dùng localStorage lưu trữ nữa -> dùng axios là 1 thư viện của js -->
+<!-- https://github.com/axios/axios -->
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TODO list</title>
+</head>
+<body>
+	<input id="new-item" type="text" name="">
+	<button type="button" onclick="addItem()">Add</button>
+	<ul id="todo-list">
+	    <!-- <li>Take a shower</li>
+	    <li>Have a walk</li>
+	    <li>Go to bed</li> -->
+	</ul>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<!-- dùng link cdn sẽ tự có 1 object axios -->
+	<script type="text/javascript">
+		// var url = 'http://localhost:9081/todos';
+		var url ='https://randomuser.me/api/';
+		axios.get(url).then(function(res) {
+			var item = res.data;
+			console.log('Data load', item);
+			// render(item);
+		});
+
+		// render();
+
+		function addItem() {
+			// console.log('add item...');
+			var input = document.getElementById("new-item");
+			var newItem = input.value;//get value of input
+			todoList.push(newItem);
+			render();
+			input.value = '';//clear input
+
+			//update localStorage
+			// localStorage.setItem(storageKey, todoList);
+			//hoặc
+			localStorage.setItem(storageKey, JSON.stringify(todoList));
+		}
+
+		function render(todoList) {
+			var htmlList = document.getElementById("todo-list");
+			var content = todoList.map(function(item) {
+				return '<li>'+item.content+'</li>';
+			});
+			htmlList.innerHTML = content.join('');
+		}	
+	</script>
+</body>
+</html>
+
+
+<!-- localStorage như 1 object 
+localStorage.setItem('foo','bar') => tạo giá trị foo: bar 
+localStorage.getItem('foo') => xem giá trị của key 'foo'
+localStorage.removeItem('foo') => xóa key -->
+
+
+<!-- axios.get("http://localhost:9081/todos").then(function(response) { -->
+	<!-- console.log(response.data); -->
+<!-- }); -->

@@ -1,0 +1,31 @@
+bai12: State
+-State là trạng thái nội tại bên trong một component 
+
+bai14: Immutability
+- Immutability là khả năng không thay đổi  của trạng thái bên trong của 1 object => nối tiếp bài bai18+20-spread.js của JSAdvanced(shallow-copy và deep-copy)
+
+
+Render component chỉ thay đổi khi props hoặc state thay đổi
+
+bai19:propTypes là 1 thuộc tính của các component dùng để validate props
+để dùng đc phải down package prop-types => npm install --save prop-types
+
+*create-react-app mặc định dùng yarn để install package(nếu có thư mục yarn.lock)
+=>ko có yarn.lock thì có thể dùng npm để install package
+=>để chắc chắn create-react-app dùng đc npm thì khi tạo project dùng: create-react-app name-project --use-npm
+
+
+bai23:storybook => storybook.js.org
+project tham khảo: nhim175/demo-storybook(github)
+storybook là nơi để chia sẻ các component, viết document(hướng dẫn) của component đó
+
+bai34 - Hướng dẫn sử dụng setState với tham số là function
+Khi sử dụng nhiều setState liên tục(các setState sẽ đc thực hiện bất đồng bộ, ko tuần tự) => các setState sẽ đc xếp vào hàng đợi => virtual DOM tính toán tổng thể sự khác biệt từ các hành động setState so vs render hiện tại => sau đó render 1 thể (không render lại sau từng setState vì tốn time và tài nguyên)
+=> giải pháp: dùng setState vs tham số là function 
+
+bai35 - React hooks useState
+- Để sử dụng hook cần cài đặt react bản 16.7-alpha => npm install --save react@next 
+hoặc search 'react' trong npm => tìm phiên bản alpha có ghi chú 'next'
+- Chú ý nhỏ: trong package.js 'react' và 'react-dom' cùng phiên bản
+- Trong codesandbox chỉ cần sửa tên phiên bản 'react' và 'react-dom' theo phiên bản alpha tìm như trên là dùng đc
+- Sử dụng hook có thể viết component theo function mà dùng đc state cùng 1 số tính năng khác

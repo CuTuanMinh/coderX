@@ -1,0 +1,25 @@
+/*position: static* | relative | fixed | absolute | sticky*/
+
+.container {
+	display: flex;
+}
+
+.box {
+	width: 100px;
+	height: 100px;
+}
+
+.red {
+	background-color: red;
+}
+
+.green {
+	background-color: green;
+	position: relative;
+	top: -10px;
+	/*relative nếu kết hợp vs 'top bottom left right' sẽ di chuyển element 1 khoảng tương đối so với vị trí ban đầu của nó*/
+}
+
+.blue {
+	background-color: blue;
+}

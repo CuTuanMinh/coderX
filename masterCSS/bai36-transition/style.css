@@ -1,0 +1,48 @@
+/*Set thời gian và gia tốc cho các hiệu ứng chuyển động trong CSS*/
+
+.button {
+	text-decoration: none;
+	font-family: Arial, sans-serif;
+	color: #333;
+	padding: 8px 16px;
+	display: inline-block;
+	background-color: #DDD;
+	transition: background-color 0.5s; /*chuyển đổi thuộc tính background-color trong 0,5s*/
+	transition: all 0.5s; /*chuyển đổi tất cả các thuộc tính*/
+}
+
+.button:hover {
+	color: #FFF;
+	background-color: red;
+}
+
+.album-item {
+	width: 200px;
+	height: 200px;
+	background-image: url('./chihoa.jpg');
+	background-size: cover;
+	background-position: center;
+}
+
+.album-item .overlay {
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	transition: all 0.5s;
+}
+
+.album-item .overlay p {
+	transform: scale(0);
+	transition: all 5s;
+}
+
+.album-item:hover .overlay {
+	opacity: 1;
+}
+
+.album-item:hover .overlay p {
+	transform: scale(1);
+}

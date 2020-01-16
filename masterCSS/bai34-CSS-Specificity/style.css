@@ -1,0 +1,20 @@
+/*CSS Specificity -> Độ ưu tiên*/
+
+/*Nhiều Selector trỏ đến 1 element:
+- Selector nào cụ thể hơn thì đc thực thi
+- 2 selector giống y hệt nhau, selector sau sẽ modify đè lên selector trước 
+*/
+
+/*google 'cssspecificity.com'*/
+
+.para {
+	color: brown;
+}
+
+p {
+	color: red;
+}
+
+p {
+	color: blue !important; /*có !important -> độ ưu tiên lớn nhất*/
+}

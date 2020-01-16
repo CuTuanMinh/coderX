@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id="root"></div>
+	<!-- <div class="title">React Tutorials</div>
+	<img src="./jaychou.jpg" alt=""> -->
+	<script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+	<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+	<script type="text/javascript">
+		// description HTML DOM by object
+		// {
+		// 	type: 'div',
+		// 	className: 'title',
+		// 	children: 'React Tutorials'
+		// }
+		// {
+		// 	type: 'img',
+		// 	src: './jaychou.jpg'
+		// }
+
+		const Title = React.createElement('div', {
+			className: 'title',			
+		}, 'React Tutorials');
+		//tham số thứ 1 là tag HTML name 
+		//tham số thứ 2 là object các properties(attribute), nếu ko có thì truyền vào null
+		//tham số thứ 3 (nếu có) là các children của nó (có thể là string content của nó)
+
+		const Img = React.createElement('img', {
+			src: './jaychou.jpg'
+		});
+
+		const App = React.createElement('div', null, Title, Img);//gom Title, Img vào App
+
+		const root = document.getElementById('root');
+		ReactDOM.render(App, root);// render App bên trong root
+
+	</script>
+</body>
+</html>

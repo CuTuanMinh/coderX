@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id="root"></div>
+	<script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+	<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+	<script type="text/javascript">
+		const root = document.getElementById('root');
+		const nameBook = ['Life of Pi', 'Sherlock Homes', 'Secret life of Walter Mitty'];
+		const bookReactComponent = nameBook.map((item) => {
+			return React.createElement('li', null, item);
+		});
+		const listBook = React.createElement('ul', null, ...bookReactComponent);
+		ReactDOM.render(listBook, root);
+	</script>
+</body>
+</html>

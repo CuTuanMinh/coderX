@@ -1,0 +1,39 @@
+<!-- HTMLElement class
+	.children        -> liệt kê element con
+	.textContent     -> đọc, thay đổi nội dung
+	.appendChild()   -> thêm con
+		Example:
+			var entry1 = document.getElementById("entry1");
+			var newItem = document.createElement('p');
+			newItem.textContent = 'How are you';
+			entry1.appendChild(newItem);
+	.remove()   -> xóa element
+			$0.remove();
+
+document.createElement()  -> tạo Element mới
+
+$0 -> element đang đc chọn -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTMLElement</title>
+</head>
+<body>
+	<div>
+		<ul id="list-item">
+		    <li>Cat</li>
+		    <li id="dog">Dog</li>
+		    <li>Elephant</li>
+		    <li>Tiger</li>
+		</ul>
+	</div>
+	<script type="text/javascript">
+		var newAnimal = document.createElement('li');
+		newAnimal.textContent = 'Chicken';
+		var listAnimal = document.getElementById('list-item');
+		listAnimal.appendChild(newAnimal);
+		var removeAnimal = document.getElementById('dog');
+		removeAnimal.remove();
+	</script>
+</body>
+</html>

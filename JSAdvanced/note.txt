@@ -1,0 +1,4 @@
+shallow copy:
+vd: a = { b: 1,
+	 c: {d: 2, e:3}
+	}

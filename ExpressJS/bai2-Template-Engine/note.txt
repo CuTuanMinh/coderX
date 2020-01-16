@@ -1,0 +1,16 @@
+- Single page application (SPA)
+- Multiple page application 
+- Template Engines:
++ Pug (jade) -> a Thinh day cai nay -> 'pughtml.com'
++ Mustache
++ ejs
+
+
+Guide of pug -> read  'expressjs.com'
+- install: npm install pug --save
+
+
+-> thực hành trong bài 1
+
+'pughtml.com' -> write code html by pug
+'pugjs.org' -> learn pug

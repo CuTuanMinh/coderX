@@ -1,0 +1,17 @@
+/*CSS 2D transform -> thay đổi hình dạng theo 2 chiều (Ox, Oy)
+- translate -> dịch chuyển vị trí
+- rotate -> xoay
+- scale -> zoom
+- skew -> biến dạng méo
+- matrix*/
+
+/*search 'tympanus.net' for seeing effect*/
+
+.item {
+	width: 100px;
+	height: 100px;
+	background-color: purple;
+	transform: translate(20px, 20px); /* dịch chuyển sang trái và xuống dưới, ngoài ra (-10px, -10px) dịch sang phải và lên trên */
+	transform: scale(0.5); /*nhỏ đi 1 nửa*/
+	transform: rotate(30deg);	
+}

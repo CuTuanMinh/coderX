@@ -1,0 +1,24 @@
+/*Media Query -> truy xuất media trong CSS -> áp dụng làm reponsive web*/
+
+.container {
+	display: flex;
+	flex-direction: column;
+}
+.item {
+	background-color: #DDD;
+	border: 1px solid black;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@media (min-width: 600px) { /*mobile first -> phát triển cho mobile trước*/
+	.container {
+		flex-direction: row;
+	}
+
+	.item {
+		flex-grow: 1;
+	}
+}

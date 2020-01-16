@@ -1,0 +1,21 @@
+1.thay đổi cookie:
+xem: document.cookie 
+thay đổi: document.cookie = cookie mới
+
+-> để bảo mật cookie: khi server gửi về cookie sẽ gửi kèm theo 1 signature -> gọi là signed cookie -> để bảo đảm cookie ko bị thay đổi
+
+-> tìm hiểu req.signedCookies
+
+
+2. Environment Variables -> chính là file .env lưu giữ các biến môi trường (.env cần cho vào gitignore)
+- 3 môi trường của sản phẩm:
++ Develop Environment -> code 
++ Staging Environment -> cho khách hàng dùng thử
++ Product Environment -> dùng trong thực tế
+- Demo đối với signed cookies:
+Signed cookies ko bao giờ đc viết trong source code vì bảo mật, cần được lưu trong biến môi trường nào đó
+Tương tự, các API key,... cũng ko đc viết trong code, cần lưu trong .env
+
+-Cách thêm biến môi trường:
+VD: mở cmd -> SESSION_SECRET=12345 node index.js -> nhược điểm: restart server sẽ mất biến đã thêm
+-> giải pháp: dùng dotenv -> npm install dotenv --save

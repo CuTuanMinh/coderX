@@ -1,0 +1,24 @@
+.list-1 > .item {
+	color: gray;
+}
+/*chỉ lấy con*/
+
+.list-1 .item {
+	color: green;
+}
+/*lấy cả con cả cháu */
+
+.list-1 .item-2 {
+	color: blue;
+}
+/*lấy item-2*/
+
+.list-1 .item-2 + .item-3 {
+	color: yellow;
+}
+/*lấy 1 thằng anh em tiếp theo của item-2 có class là item-3*/
+
+.list-2 .item-1 ~ .item {
+	color: #257;	
+}
+/*lấy tất cả anh em tiếp theo của item-1 có class là item*/

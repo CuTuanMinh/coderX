@@ -1,0 +1,12 @@
+/*attribute selector*/
+
+a[target] {
+	color: red;
+}
+/*tag <a> has 'target' attribute -> color: red*/
+
+input[type="text"] {
+	border: 1px solid red;
+}
+
+/*google 'CSS Selector cheatsheet' for more info*/

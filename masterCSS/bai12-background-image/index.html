@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css" media="screen">
+		body {
+			background-color: #EEE;
+			font-family: sans-serif;
+		}
+
+		.list-item {
+			color: red;
+			font-weight: bold;
+			font-size: 14px;   
+			padding: 16px; 
+			margin-bottom: 8px;
+			border-radius: 5px;
+			background-color: #DDD; 
+		}
+
+		.list-item-transparent {
+			background: rgb(2,0,36);
+			color: #FFF;
+			background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(65,121,9,1) 35%, rgba(0,212,255,1) 100%);
+		}
+
+		.list-item-pattern {
+			background-image: url("./chihoa.jpg");
+			/*background-size: 20%;*/
+			/*background-repeat: no-repeat; don't repeat image*/
+			/*background-repeat: repeat-x; repeat on Ox*/
+			height: 100px;
+		}
+
+		.list-item-image {
+			background-image: url("./chihoa.jpg");
+			height: 80px;
+			background-size: contain; /*làm cả image vừa khít khung hình*/
+			width: 110px;
+			/*background-size: cover; background-position: 0 -250px; lấy image ở vị trí x=0 và y=-250(lệch lên trên ) */
+		}
+
+		.list-item-parallax {
+			background-image: url("./chihoa.jpg");
+			height: 80px;
+			background-size: cover;
+			background-attachment: fixed;
+		}
+	</style>
+</head>
+<body>
+ <div class="list-item">
+ 	List item 1 
+ </div>
+ <div class="list-item list-item-transparent">
+ 	List item 2
+ </div>
+ <div class="list-item list-item-pattern"> 
+ 	<!-- pattern là hình ảnh đc lặp đi lặp lại để làm nền, search "attract pattern"  -->
+ 	List item 3
+ </div>
+ <div class="list-item list-item-image">
+ 	List item 4
+ </div>
+ <div class="list-item list-item-parallax">
+ 	List item 5
+ </div>
+ <div class="list-item">
+ 	List item 1 
+ </div>
+ <div class="list-item">
+ 	List item 1 
+ </div>
+ <div class="list-item">
+ 	List item 1 
+ </div>
+ <div class="list-item">
+ 	List item 1 
+ </div>
+ <div class="list-item">
+ 	List item 1 
+ </div>
+
+</body>
+</html>

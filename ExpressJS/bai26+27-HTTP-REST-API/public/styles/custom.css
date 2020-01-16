@@ -1,0 +1,18 @@
+/*custom css*/
+.item {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+.list-item {   
+	padding: 16px; 
+	margin-bottom: 8px;
+	margin-left: 30px;
+	border-radius: 5px;
+	background-color: #DDD;
+	width: 300px;
+}
+
+.list-item-image {
+	background-size: contain;
+	margin-bottom: 16px;
+}

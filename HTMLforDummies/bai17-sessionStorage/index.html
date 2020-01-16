@@ -1,0 +1,66 @@
+<!-- sessionStorage -> phiên ngắn hạn -> có thể hiểu 1 session là từ lúc mở đến lúc đóng browser
+sessionStorage lưu dữ liệu từ khi mở đến khi đóng browser  -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TODO list</title>
+</head>
+<body>
+	<input id="new-item" type="text" name="">
+	<button type="button" onclick="addItem()">Add</button>
+	<ul id="todo-list">
+	    <!-- <li>Take a shower</li>
+	    <li>Have a walk</li>
+	    <li>Go to bed</li> -->
+	</ul>
+	<script type="text/javascript">
+		var input = document.getElementById("new-item");
+		var storageKey = 'todoList';
+		var dataString = localStorage.getItem(storageKey);
+		var todoList;
+		if (dataString) {
+			todoList = JSON.parse(dataString);//convert value of storageKey to array	
+		}
+		else {
+			todoList = [];
+		}
+		render();
+
+		input.value = sessionStorage.getItem('draft'); //tải lại browser vẫn còn giá trị đã nhập trên thanh input
+		input.addEventListener('change', updateSessionStorage);
+
+		function updateSessionStorage() {
+			sessionStorage.setItem('draft', input.value);
+		}
+
+		function addItem() {
+			// console.log('add item...');
+			var newItem = input.value;//get value of input
+			todoList.push(newItem);
+			render();
+			input.value = '';//clear input
+
+			//update localStorage
+			// localStorage.setItem(storageKey, todoList);
+			//hoặc
+			localStorage.setItem(storageKey, JSON.stringify(todoList));
+		}
+
+		function render() {
+			var htmlList = document.getElementById("todo-list");
+			var content = todoList.map(function(item) {
+				return '<li>'+item+'</li>';
+			});
+			htmlList.innerHTML = content.join('');
+		}	
+	</script>
+</body>
+</html>
+
+
+<!-- localStorage như 1 object 
+localStorage.setItem('foo','bar') => tạo giá trị foo: bar 
+localStorage.getItem('foo') => xem giá trị của key 'foo'
+localStorage.removeItem('foo') => xóa key -->
+
+<!-- sessionStorage có method giống localStorage -->
