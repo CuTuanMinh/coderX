@@ -1,1 +1,0 @@
-props(properties of element) trong React tương ứng là các attribute của HTML DOM 
