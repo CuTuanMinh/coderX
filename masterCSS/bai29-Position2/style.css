@@ -31,5 +31,5 @@
 	fixed + top 10px   -> cách mép trên trình duyệt 10px	 
 	sử dụng khi kéo trình duyệt xuống element vẫn bám sát mép trên*/ 
 	/*-> fixed di chuyển element tương đối so với trình duyệt, 
-	khi phần tử fixed thay đổi, các phần tử khác cũng thay đổi vị trí để lấp lại kh */
+	khi phần tử fixed thay đổi, các phần tử khác cũng thay đổi vị trí để lấp lại khoảng trống pt fixed đã bỏ đi*/
 }
