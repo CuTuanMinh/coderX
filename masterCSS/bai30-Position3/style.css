@@ -22,7 +22,9 @@
 	position: absolute;
 	bottom: 0;
 	/*absolute di chuyển element tương đối so với thằng cha gần nhất của nó mà thằng cha đó có position: relative,
-	nếu không thằng cha nào có position: relative thì nó di chuyển so với thẻ <body> (tức là không gian ngoài cùng); */
+	nếu không thằng cha nào có position: relative thì nó di chuyển so với thẻ <body> (tức là không gian ngoài cùng); 
+	left: 50% và top: 50% -> đỉnh góc trên bên trái của phần tử này ra chính giữa của thằng cha mà nó đang 
+	di chuyển tương */
 }
 
 
